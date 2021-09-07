@@ -32,10 +32,11 @@ func main() {
 }
 
 func usage() {
-	fmt.Fprintln(os.Stderr, `usage: wherefrom [flags] <name>
+	fmt.Fprint(os.Stderr, `usage: wherefrom [flags] <name>
 
 Wherefrom prints every executable in $PATH matching name in the order
 they are listed. Flags:
+
 `)
 	flag.PrintDefaults()
 	os.Exit(2)
